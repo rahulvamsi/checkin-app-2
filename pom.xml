@@ -35,9 +35,9 @@
 	</distributionManagement>
 
 	<scm>
-		<connection>scm:git:git@github.com:Debraj68/check-in-app</connection>
-		<developerConnection>scm:git:git@github.com:Debraj68/check-in-app</developerConnection>
-		<url>git@github.com:Debraj68/check-in-app</url>
+		<connection>scm:git:git@github.com:rahulvamsi/checkin-app-2</connection>
+		<developerConnection>scm:git:git@github.com:rahulvamsi/checkin-app-2</developerConnection>
+		<url>git@github.com:rahulvamsi/checkin-app-2</url>
 		<tag>v0.0.1</tag>
 	</scm>
 
