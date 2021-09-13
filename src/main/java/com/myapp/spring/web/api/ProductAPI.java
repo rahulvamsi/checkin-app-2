@@ -40,21 +40,23 @@ public class ProductAPI {
 	}
 	
 	// http://localhost:8080/api/v1/products/45000
-		@GetMapping("/findByseatno/{seatno}")
-		public ResponseEntity<List<Product>> findProductsBySeatno
-		(@PathVariable("seatno") Integer seatno){
-			
-		return new ResponseEntity<List<Product>>
-		(repository.findBySeatnoGreaterThanEqual(seatno).get(), HttpStatus.OK);
-		}
-		// http://localhost:8080/api/v1/products/findByPriceOrName?price=
-		@GetMapping("/findByPnrOrName")
-		public ResponseEntity<List<Product>> findProductsByPnrOrName
-		(@RequestParam("seatno") Optional<Integer> seatno,
-				@RequestParam("firstName") Optional<String> firstName){
-			return new ResponseEntity<List<Product>>
-		(repository.findByFirstNameOrSeatno(firstName.orElse(""), seatno.orElse(0)).get(), HttpStatus.OK);
-		}
+	/*
+	 * @GetMapping("/findByseatno/{seatno}") public ResponseEntity<List<Product>>
+	 * findProductsBySeatno (@PathVariable("seatno") Integer seatno){
+	 * 
+	 * return new ResponseEntity<List<Product>>
+	 * (repository.findBySeatnoGreaterThanEqual(seatno).get(), HttpStatus.OK); } //
+	 * http://localhost:8080/api/v1/products/findByPriceOrName?price=
+	 * 
+	 * @GetMapping("/findByPnrOrName") public ResponseEntity<List<Product>>
+	 * findProductsByASeatnoOrName (@RequestParam("seatno") Optional<Integer>
+	 * seatno,
+	 * 
+	 * @RequestParam("firstName") Optional<String> firstName){ return new
+	 * ResponseEntity<List<Product>>
+	 * (repository.findByFirstNameOrSeatno(firstName.orElse(""),
+	 * seatno.orElse(0)).get(), HttpStatus.OK); }
+	 */
 	
 	// http://localhost:8080/api/v1/products
 	@PostMapping
